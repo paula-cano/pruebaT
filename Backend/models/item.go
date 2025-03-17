@@ -3,14 +3,14 @@ package models
 import "time"
 
 type Item struct {
-    ID          uint      `gorm:"primaryKey"`
-    Ticker      string    `gorm:"uniqueIndex"`
-    Company     string
-    Brokerage   string
-    Action      string
-    RatingFrom  string
-    RatingTo    string
-    TargetFrom  float64
-    TargetTo    float64
-    Time        time.Time
+	// se le agregan las comillas porque asi es como aparece la informacion en el JSON
+	Ticker     string    `json:"ticker"`
+	Company    string    `json:"company"`
+	Brokerage  string    `json:"brokerage"`
+	Action     string    `json:"action"`
+	RatingFrom string    `json:"rating_from"`
+	RatingTo   string    `json:"rating_to"`
+	TargetFrom string    `json:"target_from"`
+	TargetTo   string    `json:"target_to"`
+	Time       time.Time `json:"time"`
 }

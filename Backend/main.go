@@ -1,18 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"Backend/request"
+	"github.com/gin-gonic/gin"
+	"Backend/controllers"
 )
 
 func main() {
-	// Llamar a la función Request para capturar los valores de retorno
-	resp, err := request.Request()
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
+	r := gin.Default()
 
-	fmt.Println("Respuesta recibida:")
-	fmt.Println(resp)
+	// Nueva ruta para obtener datos
+	r.GET("/data", controllers.GetData)
+
+	// Iniciar servidor en el puerto 8082
+	r.Run(":8082")
 }
