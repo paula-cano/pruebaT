@@ -3,7 +3,7 @@ package models
 import "time"
 
 type Item struct {
-	// se le agregan las comillas porque asi es como aparece la informacion en el JSON
+	// se le agregan la informacion de las comillas porque asi es como aparece la informacion en la api
 	Ticker     string    `json:"ticker"`
 	Company    string    `json:"company"`
 	Brokerage  string    `json:"brokerage"`

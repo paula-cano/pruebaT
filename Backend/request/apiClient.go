@@ -26,7 +26,7 @@ func Request() (*models.Production, error) {
 	}
 	defer resp.Body.Close()
 
-	body, err := io.ReadAll(resp.Body) // Leer respuesta
+	body, err := io.ReadAll(resp.Body) 
 	if err != nil {
 		return nil, fmt.Errorf("error leyendo la respuesta: %v", err)
 	}
