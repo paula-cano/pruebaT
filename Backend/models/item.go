@@ -13,4 +13,5 @@ type Item struct {
 	TargetFrom string    `json:"target_from"`
 	TargetTo   string    `json:"target_to"`
 	Time       time.Time `json:"time"`
+	Score      float64
 }
